@@ -1,0 +1,143 @@
+body{
+  background-color: black;
+  
+ 
+}
+
+h1{
+  color: white;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 180px;
+  left: 140px;
+}
+
+p{
+  position: absolute;
+  color: rgb(148, 145, 145);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 5px;
+  top: 310px;
+  left: 140px;
+}
+
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+  top: 500px;
+  left: 150px;
+ }
+ 
+ button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  
+  transition: all 250ms
+ }
+ 
+ button:hover {
+  color: #e8e8e8;
+  
+ }
+ 
+ button:hover::before {
+  width: 100%;
+ }
+
+.container{
+  position: absolute;
+  height: 400px;
+  width: 330px;
+  background-color: rgb(73, 72, 72);
+  left: 700px;
+  border-radius: 5px;
+  top: 100px;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  
+  animation: floatAnimation 4s ease-in-out infinite;
+  
+}
+
+.container:hover{
+  
+ cursor: grab;
+ 
+}
+
+@keyframes floatAnimation{
+
+0%{
+  transform: translate(0%,0%)  rotate(360deg); 
+}
+25%{
+  transform: translate(5%,15%)  rotate(360deg); 
+}
+50%{
+  transform: translate(10%,5%)  rotate(360deg); 
+}
+75%{
+  transform: translate(0%,15%)  rotate(360deg); 
+}
+100%{
+  transform: translate(0%,0%)  rotate(360deg); 
+}
+
+
+   
+
+}
+
+.head{
+  position: absolute;
+  left: 40px;
+  top: 150px;
+  font-size: 30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+
+}
+
+.para{
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  font-size: 35px;
+  color: white;
+}
+
+@keyframes slide{
+
+0%{
+  transform: translate(0);
+
+
+}
+40%{
+
+  transform: translate(700px);
+}
+
+
+}
